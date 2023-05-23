@@ -1,3 +1,6 @@
+mod fixing_a_safe_program_mutating_different_tuple_fields;
+mod fixing_an_unsafe_program_aliasing_and_mutating_a_data_structure;
+mod fixing_an_unsafe_program_copying_vs_moving_out_of_a_collection;
 mod fixing_an_unsafe_program_not_enough_permissions;
 mod fixing_an_unsafe_program_returning_a_reference_to_the_stack;
 
@@ -29,5 +32,13 @@ fn main() {
         fixing_an_unsafe_program_not_enough_permissions::stringify_name_with_title_without_clone(
             name,
         );
-    println!("Finally, name={name:?} and full={full} and full2={full2}.")
+    println!("Finally, name={name:?} and full={full} and full2={full2}.");
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    fixing_an_unsafe_program_copying_vs_moving_out_of_a_collection::main();
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    fixing_a_safe_program_mutating_different_tuple_fields::main();
 }
